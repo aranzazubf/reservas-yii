@@ -1,0 +1,75 @@
+2013/02/18 21:19:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii ".' in C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('gii ')
+#1 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/gii+
+---
+2013/02/18 21:19:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'reservas'' in C:\yii-1.1.13.e9e4a0\framework\db\CDbConnection.php:381
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\yii-1.1.13.e9e4a0\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\yii-1.1.13.e9e4a0\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\yii-1.1.13.e9e4a0\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\yii-1.1.13.e9e4a0\framework\gii\generators\model\ModelCode.php(57): CModule->__get('db')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\yii-1.1.13.e9e4a0\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\yii-1.1.13.e9e4a0\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model')
+#14 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/gii/model
+HTTP_REFERER=http://reservas:90/index.php/gii/default/index
+---
+2013/02/18 21:22:47 [error] [php] Trying to get property of non-object (C:\wamp\www\reservas\protected\views\reserva\admin.php:51)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): ReservaController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): ReservaController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\ReservaController.php(135): ReservaController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): ReservaController->actionAdmin()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): ReservaController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): ReservaController->filterAccessControl()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): ReservaController->runActionWithFilters()
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): ReservaController->run()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/reserva/admin
+in C:\wamp\www\reservas\protected\views\reserva\admin.php (51)
+in C:\wamp\www\reservas\protected\controllers\ReservaController.php (135)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/18 21:23:56 [error] [php] A non well formed numeric value encountered (C:\wamp\www\reservas\protected\views\reserva\admin.php:55)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): ReservaController->renderInternal()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): ReservaController->renderFile()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): ReservaController->renderPartial()
+#3 C:\wamp\www\reservas\protected\controllers\ReservaController.php(135): ReservaController->render()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): ReservaController->actionAdmin()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): ReservaController->runAction()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): ReservaController->filterAccessControl()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): ReservaController->runActionWithFilters()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): ReservaController->run()
+#14 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/reserva/admin
+in C:\wamp\www\reservas\protected\views\reserva\admin.php (55)
+in C:\wamp\www\reservas\protected\controllers\ReservaController.php (135)
+in C:\wamp\www\reservas\index.php (13)
