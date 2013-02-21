@@ -73,3 +73,1337 @@ REQUEST_URI=/index.php/reserva/admin
 in C:\wamp\www\reservas\protected\views\reserva\admin.php (55)
 in C:\wamp\www\reservas\protected\controllers\ReservaController.php (135)
 in C:\wamp\www\reservas\index.php (13)
+2013/02/18 21:28:36 [error] [php] Use of undefined constant time - assumed 'time' (C:\wamp\www\reservas\protected\views\reserva\admin.php:55)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): ReservaController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): ReservaController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\ReservaController.php(135): ReservaController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): ReservaController->actionAdmin()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): ReservaController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): ReservaController->filterAccessControl()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): ReservaController->runActionWithFilters()
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): ReservaController->run()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/reserva/admin
+in C:\wamp\www\reservas\protected\views\reserva\admin.php (55)
+in C:\wamp\www\reservas\protected\controllers\ReservaController.php (135)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/20 17:26:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'reserva'' in C:\yii-1.1.13.e9e4a0\framework\db\CDbConnection.php:381
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\yii-1.1.13.e9e4a0\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\yii-1.1.13.e9e4a0\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\yii-1.1.13.e9e4a0\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\yii-1.1.13.e9e4a0\framework\gii\generators\model\ModelCode.php(57): CModule->__get('db')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\yii-1.1.13.e9e4a0\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\yii-1.1.13.e9e4a0\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model')
+#14 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/gii/model
+HTTP_REFERER=http://reservas:90/index.php/gii/default/index
+---
+2013/02/20 18:40:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reserva/view".' in C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('reserva/view')
+#1 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/reserva/1
+---
+2013/02/20 18:52:14 [error] [exception.CException] exception 'CException' with message 'Property "Intervalo.intervalo_nombre" is not defined.' in C:\yii-1.1.13.e9e4a0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(143): CComponent->__get('intervalo_nombr...')
+#1 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(66): CActiveRecord->__get('intervalo_nombr...')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): DiaIntervaloProfesionalController->actionCreate()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('diaintervalopro...')
+#13 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/diaintervaloprofesional/create
+HTTP_REFERER=http://reservas:90/index.php/diaintervaloprofesional
+---
+2013/02/20 18:52:47 [error] [php] Undefined variable: intHelper (C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php:20)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#1 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\create.php(18): DiaIntervaloProfesionalController->renderPartial()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): DiaIntervaloProfesionalController->renderInternal()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): DiaIntervaloProfesionalController->renderPartial()
+#6 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(80): DiaIntervaloProfesionalController->render()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): DiaIntervaloProfesionalController->actionCreate()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): DiaIntervaloProfesionalController->runAction()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): DiaIntervaloProfesionalController->filterAccessControl()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): DiaIntervaloProfesionalController->runActionWithFilters()
+#16 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): DiaIntervaloProfesionalController->run()
+#17 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/diaintervaloprofesional/create
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php (20)
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\create.php (18)
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (80)
+2013/02/20 18:53:01 [error] [php] Undefined variable: intHelper (C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php:20)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#1 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\create.php(18): DiaIntervaloProfesionalController->renderPartial()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): DiaIntervaloProfesionalController->renderInternal()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): DiaIntervaloProfesionalController->renderPartial()
+#6 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(80): DiaIntervaloProfesionalController->render()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): DiaIntervaloProfesionalController->actionCreate()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): DiaIntervaloProfesionalController->runAction()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): DiaIntervaloProfesionalController->filterAccessControl()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): DiaIntervaloProfesionalController->runActionWithFilters()
+#16 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): DiaIntervaloProfesionalController->run()
+#17 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/diaintervaloprofesional/create
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php (20)
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\create.php (18)
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (80)
+2013/02/20 18:55:45 [error] [exception.CException] exception 'CException' with message 'Property "Profesional.profesional_ape_paterno" is not defined.' in C:\yii-1.1.13.e9e4a0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(143): CComponent->__get('profesional_ape...')
+#1 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(72): CActiveRecord->__get('profesional_ape...')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): DiaIntervaloProfesionalController->actionCreate()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('diaintervalopro...')
+#13 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/diaintervaloprofesional/create
+HTTP_REFERER=http://reservas:90/index.php/diaintervaloprofesional
+---
+2013/02/20 18:57:00 [error] [exception.CException] exception 'CException' with message 'Property "Dia.findAll" is not defined.' in C:\yii-1.1.13.e9e4a0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(143): CComponent->__get('findAll')
+#1 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php(27): CActiveRecord->__get('findAll')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#5 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\create.php(18): CController->renderPartial('_form', Array)
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(87): CController->render('create', Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): DiaIntervaloProfesionalController->actionCreate()
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('create')
+#21 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('diaintervalopro...')
+#22 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/index.php/diaintervaloprofesional/create
+HTTP_REFERER=http://reservas:90/index.php/diaintervaloprofesional
+---
+2013/02/20 20:10:17 [error] [php] include(Sucursal.php): failed to open stream: No such file or directory (C:\yii-1.1.13.e9e4a0\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php(34): spl_autoload_call()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): DiaIntervaloProfesionalController->renderInternal()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#4 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\create.php(18): DiaIntervaloProfesionalController->renderPartial()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): DiaIntervaloProfesionalController->renderInternal()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): DiaIntervaloProfesionalController->renderPartial()
+#9 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(87): DiaIntervaloProfesionalController->render()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): DiaIntervaloProfesionalController->actionCreate()
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): DiaIntervaloProfesionalController->runAction()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): DiaIntervaloProfesionalController->filterAccessControl()
+#16 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): DiaIntervaloProfesionalController->runActionWithFilters()
+#19 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): DiaIntervaloProfesionalController->run()
+#20 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/diaintervaloprofesional/create
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php (34)
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\create.php (18)
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (87)
+2013/02/20 20:50:24 [error] [exception.CException] exception 'CException' with message 'DiaIntervaloProfesionalController and its behaviors do not have a method or closure named "model".' in C:\yii-1.1.13.e9e4a0\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(78): CComponent->__call('model', Array)
+#1 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(78): DiaIntervaloProfesionalController->model()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): DiaIntervaloProfesionalController->actionCreate()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('diaintervalopro...')
+#13 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/diaintervaloprofesional/create
+HTTP_REFERER=http://reservas:90/index.php/diaintervaloprofesional/create
+---
+2013/02/20 20:54:13 [error] [exception.CException] exception 'CException' with message 'DiaIntervaloProfesionalController and its behaviors do not have a method or closure named "model".' in C:\yii-1.1.13.e9e4a0\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(78): CComponent->__call('model', Array)
+#1 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(78): DiaIntervaloProfesionalController->model()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): DiaIntervaloProfesionalController->actionCreate()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('diaintervalopro...')
+#13 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/diaintervaloprofesional/create
+HTTP_REFERER=http://reservas:90/index.php/diaintervaloprofesional/create
+---
+2013/02/20 20:54:32 [warning] [application] Failed to set unsafe attribute "sucursal_id" of "DiaIntervaloProfesional".
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (86)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/20 20:55:22 [warning] [application] Failed to set unsafe attribute "sucursal_id" of "DiaIntervaloProfesional".
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (86)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/20 20:57:27 [warning] [application] Failed to set unsafe attribute "sucursal_id" of "DiaIntervaloProfesional".
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (86)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/20 20:58:14 [warning] [application] Failed to set unsafe attribute "sucursal_id" of "DiaIntervaloProfesional".
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (86)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/20 21:13:02 [warning] [application] Failed to set unsafe attribute "sucursal_id" of "DiaIntervaloProfesional".
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (78)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/20 21:23:59 [error] [php] Trying to get property of non-object (C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php:90)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): DiaIntervaloProfesionalController->runAction()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): DiaIntervaloProfesionalController->filterAccessControl()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): DiaIntervaloProfesionalController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): DiaIntervaloProfesionalController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/diaintervaloprofesional/create
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (90)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 12:13:43 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\yii-1.1.13.e9e4a0\framework\zii\widgets\CDetailView.php:180
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(173): CDetailView->run()
+#1 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\view.php(30): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(53): CController->render('view', Array)
+#7 [internal function]: DiaIntervaloProfesionalController->actionView('19')
+#8 C:\yii-1.1.13.e9e4a0\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DiaIntervaloProfesionalController), Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiaIntervaloProfesionalController), Object(ReflectionMethod), Array)
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('diaintervalopro...')
+#20 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/diaintervaloprofesional/19
+HTTP_REFERER=http://reservas:90/index.php/diaintervaloprofesional/create
+---
+2013/02/21 12:15:48 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\yii-1.1.13.e9e4a0\framework\zii\widgets\CDetailView.php:180
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(173): CDetailView->run()
+#1 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\view.php(33): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(53): CController->render('view', Array)
+#7 [internal function]: DiaIntervaloProfesionalController->actionView('19')
+#8 C:\yii-1.1.13.e9e4a0\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DiaIntervaloProfesionalController), Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiaIntervaloProfesionalController), Object(ReflectionMethod), Array)
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('diaintervalopro...')
+#20 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/diaintervaloprofesional/19
+HTTP_REFERER=http://reservas:90/index.php/diaintervaloprofesional/create
+---
+2013/02/21 12:16:10 [error] [exception.CException] exception 'CException' with message 'Property "DiaIntervaloProfesional.intervalo_inicio" is not defined.' in C:\yii-1.1.13.e9e4a0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(143): CComponent->__get('intervalo_inici...')
+#1 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\view.php(28): CActiveRecord->__get('intervalo_inici...')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(53): CController->render('view', Array)
+#7 [internal function]: DiaIntervaloProfesionalController->actionView('19')
+#8 C:\yii-1.1.13.e9e4a0\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DiaIntervaloProfesionalController), Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiaIntervaloProfesionalController), Object(ReflectionMethod), Array)
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('diaintervalopro...')
+#20 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/diaintervaloprofesional/19
+HTTP_REFERER=http://reservas:90/index.php/diaintervaloprofesional/create
+---
+2013/02/21 12:16:30 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\yii-1.1.13.e9e4a0\framework\zii\widgets\CDetailView.php:180
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(173): CDetailView->run()
+#1 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\view.php(35): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(53): CController->render('view', Array)
+#7 [internal function]: DiaIntervaloProfesionalController->actionView('19')
+#8 C:\yii-1.1.13.e9e4a0\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DiaIntervaloProfesionalController), Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DiaIntervaloProfesionalController), Object(ReflectionMethod), Array)
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('diaintervalopro...')
+#20 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php/diaintervaloprofesional/19
+HTTP_REFERER=http://reservas:90/index.php/diaintervaloprofesional/create
+---
+2013/02/21 13:01:38 [error] [php] Undefined variable: intHelper (C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php:20)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#1 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\update.php(21): DiaIntervaloProfesionalController->renderPartial()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): DiaIntervaloProfesionalController->renderInternal()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): DiaIntervaloProfesionalController->renderPartial()
+#6 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(126): DiaIntervaloProfesionalController->render()
+#7 unknown(0): DiaIntervaloProfesionalController->actionUpdate()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): DiaIntervaloProfesionalController->runAction()
+#12 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): DiaIntervaloProfesionalController->filterAccessControl()
+#15 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): DiaIntervaloProfesionalController->runActionWithFilters()
+#18 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): DiaIntervaloProfesionalController->run()
+#19 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/diaintervaloprofesional/update/11
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php (20)
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\update.php (21)
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (126)
+2013/02/21 13:05:08 [error] [php] Undefined variable: intHelper (C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php:20)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#1 C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\update.php(21): DiaIntervaloProfesionalController->renderPartial()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): DiaIntervaloProfesionalController->renderInternal()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): DiaIntervaloProfesionalController->renderPartial()
+#6 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(155): DiaIntervaloProfesionalController->render()
+#7 unknown(0): DiaIntervaloProfesionalController->actionUpdate()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): DiaIntervaloProfesionalController->runAction()
+#12 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): DiaIntervaloProfesionalController->filterAccessControl()
+#15 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): DiaIntervaloProfesionalController->runActionWithFilters()
+#18 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): DiaIntervaloProfesionalController->run()
+#19 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/diaintervaloprofesional/update/11
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\_form.php (20)
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\update.php (21)
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (155)
+2013/02/21 13:05:26 [error] [php] Undefined variable: intHelper (C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\update.php:21)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): DiaIntervaloProfesionalController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): DiaIntervaloProfesionalController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php(155): DiaIntervaloProfesionalController->render()
+#3 unknown(0): DiaIntervaloProfesionalController->actionUpdate()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(133): DiaIntervaloProfesionalController->runAction()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\filters\CInlineFilter.php(58): DiaIntervaloProfesionalController->filterAccessControl()
+#11 C:\yii-1.1.13.e9e4a0\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): DiaIntervaloProfesionalController->runActionWithFilters()
+#14 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): DiaIntervaloProfesionalController->run()
+#15 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/diaintervaloprofesional/update/11
+in C:\wamp\www\reservas\protected\views\diaIntervaloProfesional\update.php (21)
+in C:\wamp\www\reservas\protected\controllers\DiaIntervaloProfesionalController.php (155)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 14:41:35 [error] [php] Undefined variable: buscarProfesionalApellidoModel (C:\wamp\www\reservas\protected\views\site\index.php:11)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(36): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/
+in C:\wamp\www\reservas\protected\views\site\index.php (11)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (36)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 14:55:01 [error] [php] Missing argument 2 for CHtml::listData(), called in C:\wamp\www\reservas\protected\controllers\SiteController.php on line 30 and defined (C:\yii-1.1.13.e9e4a0\framework\web\helpers\CHtml.php:1836)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (30)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 15:21:31 [error] [php] strpos() expects parameter 1 to be string, array given (C:\yii-1.1.13.e9e4a0\framework\web\CController.php:963)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#4 C:\wamp\www\reservas\protected\controllers\SiteController.php(41): SiteController->render()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/
+in C:\wamp\www\reservas\protected\views\site\index.php (8)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (41)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 15:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "listaProfesionales".' in C:\yii-1.1.13.e9e4a0\framework\web\CController.php:483
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(270): CController->missingAction('listaProfesiona...')
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listaProfesiona...')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listaProfe...')
+#3 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/listaProfesionales
+HTTP_REFERER=http://reservas:90/index.php/
+---
+2013/02/21 15:52:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "verHorasProfesional".' in C:\yii-1.1.13.e9e4a0\framework\web\CController.php:483
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(270): CController->missingAction('verHorasProfesi...')
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('verHorasProfesi...')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/verHorasPr...')
+#3 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/verHorasProfesional
+HTTP_REFERER=http://reservas:90/index.php/site/listarProfesionales
+---
+2013/02/21 16:47:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT * FROM `profesional` `t` WHERE profesional_apellido = .
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (48)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 16:47:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT * FROM `profesional` `t` WHERE profesional_apellido = ' in C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\reservas\protected\controllers\SiteController.php(48): CActiveRecord->findAll('profesional_ape...')
+#4 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#10 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+HTTP_REFERER=http://reservas:90/index.php/
+---
+2013/02/21 16:48:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profesional_apellido' in 'where clause'. The SQL statement executed was: SELECT * FROM `profesional` `t` WHERE profesional_apellido LIKE '%cardenas%' .
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (48)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 16:48:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profesional_apellido' in 'where clause'. The SQL statement executed was: SELECT * FROM `profesional` `t` WHERE profesional_apellido LIKE '%cardenas%' ' in C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\reservas\protected\controllers\SiteController.php(48): CActiveRecord->findAll('profesional_ape...')
+#4 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#10 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+HTTP_REFERER=http://reservas:90/index.php/
+---
+2013/02/21 16:52:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profesional_especialidad.especialidad_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesional_especialidad.especialidad_id = 1).
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (55)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 16:52:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'profesional_especialidad.especialidad_id' in 'where clause'. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesional_especialidad.especialidad_id = 1)' in C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(761): CDbCommand->queryAll()
+#2 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\reservas\protected\controllers\SiteController.php(55): CActiveRecord->findAll('profesional_esp...')
+#7 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#13 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+HTTP_REFERER=http://reservas:90/index.php/
+---
+2013/02/21 16:59:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesionalEspecialidades.especialidad_id = ).
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (55)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 16:59:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesionalEspecialidades.especialidad_id = )' in C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(761): CDbCommand->queryAll()
+#2 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\reservas\protected\controllers\SiteController.php(55): CActiveRecord->findAll('profesionalEspe...')
+#7 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#13 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+HTTP_REFERER=http://reservas:90/index.php/
+---
+2013/02/21 17:03:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesionalEspecialidades.especialidad_id = ).
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (55)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 17:03:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesionalEspecialidades.especialidad_id = )' in C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(761): CDbCommand->queryAll()
+#2 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\reservas\protected\controllers\SiteController.php(55): CActiveRecord->findAll('profesionalEspe...')
+#7 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#13 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+HTTP_REFERER=http://reservas:90/index.php/
+---
+2013/02/21 17:04:32 [error] [exception.CException] exception 'CException' with message 'Property "BuscarProfesionalEspecialidad.especialidad_id" is not defined.' in C:\yii-1.1.13.e9e4a0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\helpers\CHtml.php(2255): CComponent->__get('especialidad_id')
+#1 C:\yii-1.1.13.e9e4a0\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(BuscarProfesionalEspecialidad), 'especialidad_id')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(BuscarProfesionalEspecialidad), 'especialidad_id', Array, Array)
+#3 C:\wamp\www\reservas\protected\views\site\index.php(35): CActiveForm->dropDownList(Object(BuscarProfesionalEspecialidad), 'especialidad_id', Array, Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\reservas\protected\controllers\SiteController.php(41): CController->render('index', Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/
+---
+2013/02/21 17:04:36 [error] [exception.CException] exception 'CException' with message 'Property "BuscarProfesionalEspecialidad.especialidad_id" is not defined.' in C:\yii-1.1.13.e9e4a0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\helpers\CHtml.php(2255): CComponent->__get('especialidad_id')
+#1 C:\yii-1.1.13.e9e4a0\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(BuscarProfesionalEspecialidad), 'especialidad_id')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(BuscarProfesionalEspecialidad), 'especialidad_id', Array, Array)
+#3 C:\wamp\www\reservas\protected\views\site\index.php(35): CActiveForm->dropDownList(Object(BuscarProfesionalEspecialidad), 'especialidad_id', Array, Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\reservas\protected\controllers\SiteController.php(41): CController->render('index', Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/
+---
+2013/02/21 17:04:37 [error] [exception.CException] exception 'CException' with message 'Property "BuscarProfesionalEspecialidad.especialidad_id" is not defined.' in C:\yii-1.1.13.e9e4a0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\helpers\CHtml.php(2255): CComponent->__get('especialidad_id')
+#1 C:\yii-1.1.13.e9e4a0\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(BuscarProfesionalEspecialidad), 'especialidad_id')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(BuscarProfesionalEspecialidad), 'especialidad_id', Array, Array)
+#3 C:\wamp\www\reservas\protected\views\site\index.php(35): CActiveForm->dropDownList(Object(BuscarProfesionalEspecialidad), 'especialidad_id', Array, Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp\www\reservas\protected\controllers\SiteController.php(41): CController->render('index', Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/
+---
+2013/02/21 17:21:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesionalEspecialidades.especialidad_id = ).
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (55)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 17:21:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesionalEspecialidades.especialidad_id = )' in C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(761): CDbCommand->queryAll()
+#2 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\reservas\protected\controllers\SiteController.php(55): CActiveRecord->findAll('profesionalEspe...')
+#7 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#13 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+HTTP_REFERER=http://reservas:90/index.php/
+---
+2013/02/21 17:23:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesionalEspecialidades.especialidad_id = ).
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (55)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 17:23:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesionalEspecialidades.especialidad_id = )' in C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(761): CDbCommand->queryAll()
+#2 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\reservas\protected\controllers\SiteController.php(55): CActiveRecord->findAll('profesionalEspe...')
+#7 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#13 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+HTTP_REFERER=http://reservas:90/index.php/
+---
+2013/02/21 17:30:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contacto".' in C:\yii-1.1.13.e9e4a0\framework\web\CController.php:483
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(270): CController->missingAction('contacto')
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('contacto')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/contacto')
+#3 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/contacto
+---
+2013/02/21 17:38:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesionalEspecialidades.especialidad_id = ).
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (55)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 17:38:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT `t`.`profesional_id` AS `t0_c0`, `t`.`profesional_rut` AS `t0_c1`, `t`.`profesional_dv` AS `t0_c2`, `t`.`profesional_nombre` AS `t0_c3`, `t`.`profesional_apellido_paterno` AS `t0_c4`, `t`.`profesional_apellido_materno` AS `t0_c5`, `t`.`profesional_email` AS `t0_c6`, `t`.`profesional_password` AS `t0_c7`, `profesionalEspecialidades`.`profesional_especialidad_id` AS `t1_c0`, `profesionalEspecialidades`.`profesional_id` AS `t1_c1`, `profesionalEspecialidades`.`especialidad_id` AS `t1_c2` FROM `profesional` `t`  LEFT OUTER JOIN `profesional_especialidad` `profesionalEspecialidades` ON (`profesionalEspecialidades`.`profesional_id`=`t`.`profesional_id`)  WHERE (profesionalEspecialidades.especialidad_id = )' in C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(761): CDbCommand->queryAll()
+#2 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(422): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\reservas\protected\controllers\SiteController.php(55): CActiveRecord->findAll('profesionalEspe...')
+#7 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#13 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+HTTP_REFERER=http://reservas:90/index.php/
+---
+2013/02/21 17:51:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "agendaProfesional".' in C:\yii-1.1.13.e9e4a0\framework\web\CController.php:483
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(270): CController->missingAction('agendaProfesion...')
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('agendaProfesion...')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/agendaProf...')
+#3 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/agendaProfesional/1
+HTTP_REFERER=http://reservas:90/index.php/site/listarProfesionales
+---
+2013/02/21 17:56:37 [error] [php] Use of undefined constant _fecha - assumed '_fecha' (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:10)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(78): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional/1
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (10)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (78)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 18:00:59 [error] [php] Use of undefined constant _fecha - assumed '_fecha' (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:10)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(78): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional/1
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (10)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (78)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 18:01:08 [error] [php] Use of undefined constant _fecha - assumed '_fecha' (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:10)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(78): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional/1
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (10)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (78)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 18:21:32 [error] [php] Undefined variable: profesionales (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:32)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(78): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional?fecha=2013/02/24
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (32)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (78)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 18:56:19 [error] [exception.CException] exception 'CException' with message 'Property "DiaIntervaloProfesional.sucursal_nombre" is not defined.' in C:\yii-1.1.13.e9e4a0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\db\ar\CActiveRecord.php(143): CComponent->__get('sucursal_nombre')
+#1 C:\wamp\www\reservas\protected\models\DiaIntervaloProfesional.php(146): CActiveRecord->__get('sucursal_nombre')
+#2 C:\wamp\www\reservas\protected\views\site\listarProfesionales.php(14): DiaIntervaloProfesional::getSucursalesProfesionalSelect('1')
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('listarProfesion...', Array, true)
+#7 C:\wamp\www\reservas\protected\controllers\SiteController.php(67): CController->render('listarProfesion...', Array)
+#8 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#13 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#14 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+---
+2013/02/21 19:01:16 [error] [php] Trying to get property of non-object (C:\wamp\www\reservas\protected\models\DiaIntervaloProfesional.php:147)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#3 C:\wamp\www\reservas\protected\controllers\SiteController.php(67): SiteController->render()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/listarProfesionales
+in C:\wamp\www\reservas\protected\models\DiaIntervaloProfesional.php (147)
+in C:\wamp\www\reservas\protected\views\site\listarProfesionales.php (14)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (67)
+2013/02/21 19:01:30 [error] [php] Trying to get property of non-object (C:\wamp\www\reservas\protected\models\DiaIntervaloProfesional.php:147)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#3 C:\wamp\www\reservas\protected\controllers\SiteController.php(60): SiteController->render()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/listarProfesionales
+in C:\wamp\www\reservas\protected\models\DiaIntervaloProfesional.php (147)
+in C:\wamp\www\reservas\protected\views\site\listarProfesionales.php (14)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (60)
+2013/02/21 19:48:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "listarProfesional".' in C:\yii-1.1.13.e9e4a0\framework\web\CController.php:483
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(270): CController->missingAction('listarProfesion...')
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#3 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/listarProfesional
+---
+2013/02/21 19:56:26 [error] [php] Undefined index: sucursales-profesional (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:24)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(79): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (24)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (79)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 20:12:27 [error] [exception.CHttpException.No se puede mostrar la página solicitada.] exception 'CHttpException' in C:\wamp\www\reservas\protected\controllers\SiteController.php:82
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('agendaProfesion...')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/agendaProf...')
+#6 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/site/agendaProfesional
+---
+2013/02/21 20:14:25 [error] [exception.CHttpException.no se puede mostrar la página solicitada.] exception 'CHttpException' in C:\wamp\www\reservas\protected\controllers\SiteController.php:84
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('agendaProfesion...')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/agendaProf...')
+#6 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/site/agendaProfesional
+---
+2013/02/21 20:25:34 [error] [exception.CHttpException.no se puede mostrar la página solicitada.] exception 'CHttpException' in C:\wamp\www\reservas\protected\controllers\SiteController.php:62
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#6 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+---
+2013/02/21 20:25:55 [error] [exception.CHttpException.no se puede mostrar la página solicitada.] exception 'CHttpException' in C:\wamp\www\reservas\protected\controllers\SiteController.php:62
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#6 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+---
+2013/02/21 20:26:20 [error] [php] Undefined index: fecha-seleccionada (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:4)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(77): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (4)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (77)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 20:27:48 [error] [exception.CHttpException.no se puede mostrar la página solicitada.] exception 'CHttpException' in C:\wamp\www\reservas\protected\controllers\SiteController.php:62
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionListarProfesionales()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('listarProfesion...')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/listarProf...')
+#6 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/site/listarProfesionales
+---
+2013/02/21 20:27:55 [error] [exception.Exception] exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (20132013/0202/2121) at position 7 (3): Double date specification' in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:4
+Stack trace:
+#0 C:\wamp\www\reservas\protected\views\site\agendaProfesional.php(4): DateTime->__construct('20132013/0202/2...')
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('agendaProfesion...', Array, true)
+#5 C:\wamp\www\reservas\protected\controllers\SiteController.php(77): CController->render('agendaProfesion...', Array)
+#6 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('agendaProfesion...')
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/agendaProf...')
+#12 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php/site/agendaProfesional
+HTTP_REFERER=http://reservas:90/index.php/site/listarProfesionales
+---
+2013/02/21 20:28:17 [error] [php] date() expects at least 1 parameter, 0 given (C:\wamp\www\reservas\protected\controllers\SiteController.php:67)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (67)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 20:28:30 [error] [exception.Exception] exception 'Exception' with message 'DateTime::__construct(): Failed to parse time string (20132013/0202/2121) at position 7 (3): Double date specification' in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:4
+Stack trace:
+#0 C:\wamp\www\reservas\protected\views\site\agendaProfesional.php(4): DateTime->__construct('20132013/0202/2...')
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(126): require('C:\wamp\www\res...')
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\res...', Array, true)
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\res...', Array, true)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): CController->renderPartial('agendaProfesion...', Array, true)
+#5 C:\wamp\www\reservas\protected\controllers\SiteController.php(78): CController->render('agendaProfesion...', Array)
+#6 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('agendaProfesion...')
+#11 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/agendaProf...')
+#12 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php/site/agendaProfesional
+HTTP_REFERER=http://reservas:90/index.php/site/listarProfesionales
+---
+2013/02/21 20:42:35 [error] [php] Undefined index: dia-id (C:\wamp\www\reservas\protected\controllers\SiteController.php:72)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (72)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 20:45:15 [error] [exception.CHttpException.no se puede mostrar la página solicitada.] exception 'CHttpException' in C:\wamp\www\reservas\protected\controllers\SiteController.php:81
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): CController->run('agendaProfesion...')
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController('site/agendaProf...')
+#6 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\reservas\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/index.php/site/agendaProfesional
+---
+2013/02/21 20:54:34 [error] [php] Object of class Intervalo could not be converted to string (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:56)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(79): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (56)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (79)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 20:55:30 [error] [php] Object of class Intervalo could not be converted to string (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:56)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(79): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (56)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (79)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 20:56:09 [error] [php] Object of class Intervalo could not be converted to string (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:56)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(79): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (56)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (79)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 20:57:46 [error] [php] Object of class Intervalo could not be converted to string (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:56)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(79): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (56)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (79)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 20:58:04 [error] [php] Object of class Intervalo could not be converted to string (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:57)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(79): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (57)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (79)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 21:02:09 [error] [php] Undefined variable: filas (C:\wamp\www\reservas\protected\models\DiaIntervaloProfesional.php:153)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\models\DiaIntervaloProfesional.php (153)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (72)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 21:04:09 [error] [php] Object of class Intervalo could not be converted to string (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:57)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(79): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (57)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (79)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 21:08:26 [error] [php] Undefined variable: sucursalesProfesional (C:\wamp\www\reservas\protected\controllers\SiteController.php:75)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (75)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 21:12:16 [error] [php] Object of class DateTime could not be converted to int (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:5)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(77): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (5)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (77)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 21:20:13 [error] [php] Undefined variable: datetime1 (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:14)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(77): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (14)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (77)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 21:20:34 [error] [php] Object of class DateInterval could not be converted to string (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:14)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(77): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (14)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (77)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 21:20:56 [error] [php] Object of class DateInterval could not be converted to string (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:6)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(77): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (6)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (77)
+in C:\wamp\www\reservas\index.php (13)
+2013/02/21 21:21:34 [error] [php] Undefined variable: intervalo (C:\wamp\www\reservas\protected\views\site\agendaProfesional.php:15)
+Stack trace:
+#0 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\reservas\protected\controllers\SiteController.php(77): SiteController->render()
+#3 C:\yii-1.1.13.e9e4a0\framework\web\actions\CInlineAction.php(49): SiteController->actionAgendaProfesional()
+#4 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\yii-1.1.13.e9e4a0\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\yii-1.1.13.e9e4a0\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\yii-1.1.13.e9e4a0\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\reservas\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/agendaProfesional
+in C:\wamp\www\reservas\protected\views\site\agendaProfesional.php (15)
+in C:\wamp\www\reservas\protected\controllers\SiteController.php (77)
+in C:\wamp\www\reservas\index.php (13)

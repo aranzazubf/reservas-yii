@@ -53,7 +53,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		*/
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=sakila',
+			'connectionString' => 'mysql:host=localhost;dbname=reservas',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
