@@ -1,20 +1,52 @@
-<?php
-/* @var $this SiteController */
+<div class="titulo-h1">
+    <h1>Buscar Profesional</h1>
+</div>
+<div class="form">
+    <?php
+    $formApellido = $this->beginWidget('CActiveForm', array(
+        'id' => 'apellido-form',
+        'enableClientValidation' => true,
+        'clientOptions' => array(
+            'validateOnSubmit' => true,
+        ),
+        'action' => CController::createUrl('site/listarProfesionales'),
+    ));
+    ?>
 
-$this->pageTitle=Yii::app()->name;
-?>
+    <div class="row">
+        <?php echo $formApellido->labelEx($buscarProfesionalApellidoModel, 'apellido'); ?>
+<?php echo $formApellido->textField($buscarProfesionalApellidoModel, 'apellido'); ?>
+<?php echo $formApellido->error($buscarProfesionalApellidoModel, 'apellido'); ?>
+    </div>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+    <div class="row buttons">
+    <?php echo CHtml::submitButton('Buscar Profesional', array('class' => 'btn')); ?>
+    </div>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<?php $this->endWidget(); ?>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
+    <div class="margen-20"></div>
 
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+    <?php
+    $formEspecialidad = $this->beginWidget('CActiveForm', array(
+        'id' => 'especialidad-form',
+        'enableClientValidation' => true,
+        'clientOptions' => array(
+            'validateOnSubmit' => true,
+        ),
+        'action' => CController::createUrl('site/listarProfesionales'),
+    ));
+    ?>
+
+    <div class="row">
+<?php echo $formEspecialidad->labelEx($buscarProfesionalEspecialidadModel, 'especialidad'); ?>
+        <?php echo $formEspecialidad->dropDownList($buscarProfesionalEspecialidadModel, 'especialidad', $especialidades, array('empty' => 'SELECCIONE ESPECIALIDAD')); ?>
+        <?php echo $formEspecialidad->error($buscarProfesionalEspecialidadModel, 'especialidad'); ?>
+    </div>
+
+    <div class="row buttons">
+<?php echo CHtml::submitButton('Buscar Profesional', array('class' => 'btn')); ?>
+    </div>
+
+<?php $this->endWidget(); ?>
+</div>
