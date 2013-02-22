@@ -75,20 +75,7 @@ class DiaIntervaloProfesionalController extends Controller {
         // $this->performAjaxValidation($model);
 
         if (isset($_POST['DiaIntervaloProfesional'])) {
-            $sql = "
-            SELECT
-                    *
-            FROM
-                    dia_intervalo_profesional
-            WHERE
-                    intervalo_id = " . $_POST['DiaIntervaloProfesional']['intervalo_id'] . "
-                    AND dia_id = " . $_POST['DiaIntervaloProfesional']['dia_id'] . "
-                    AND profesional_id = " . $_POST['DiaIntervaloProfesional']['profesional_id'] . "
-                    AND sucursal_id = " . $_POST['DiaIntervaloProfesional']['sucursal_id'] . " ";
-
-            $objIntervalo = DiaIntervaloProfesional::model()->findBySql($sql);
-            //echo "<pre>"; print_r($objIntervalo); echo "</pre>"; exit();
-            if (isset($objIntervalo)) {
+            if (DiaIntervaloProfesional::intervaloExiste()) {
                 yii::app()->user->setFlash('errorIntervaloExiste', 'El intervalo existe');
             } else {
                 $model->attributes = $_POST['DiaIntervaloProfesional'];

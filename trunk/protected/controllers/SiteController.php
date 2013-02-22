@@ -2,6 +2,12 @@
 
 class SiteController extends Controller {
 
+    public function init() {
+        if(!isset($_SESSION['DatosUsuario'])) {
+            $this->redirect(array('login/index'));
+        }
+    }
+    
     /**
      * Declares class-based actions.
      */
@@ -70,16 +76,27 @@ class SiteController extends Controller {
             $sucursalesProfesional = DiaIntervaloProfesional::getSucursalesProfesionalArray($_POST['DatosAgenda']['profesional-id']);
             //echo "<pre>"; print_r($sucursalesProfesional); exit();
             $intervalos = DiaIntervaloProfesional::getIntervalosProfesionalSucursalDia(isset($_POST['DatosAgenda']['dia-id']) ? $_POST['DatosAgenda']['dia-id'] : (date('N')), $_POST['DatosAgenda']['profesional-id'], $_POST['DatosAgenda']['sucursal-id']);
+            $objReservas = Reserva::model()->findAll('reserva_fecha = ' . isset($_POST['DatosAgenda']['fecha-seleccionada']) ? $_POST['DatosAgenda']['fecha-seleccionada'] : date('Y/m/d'));
+            $reservas = array();
             
+            foreach($objReservas as $reserva) {
+                $reservas[] = $reserva->dia_intervalo_profesional_id;
+            }
+            //echo "<pre>"; print_r($intervalos); exit();
             $this->render('agendaProfesional',
                     array(
                         'profesional' => $profesional,
                         'intervalos' => $intervalos,
-                        'sucursalesProfesional' => $sucursalesProfesional
+                        'sucursalesProfesional' => $sucursalesProfesional,
+                        'reservas' => $reservas
                     ));
         } else {
             throw new CHttpException('no se puede mostrar la página solicitada.');
         }
+    }
+    
+    public function actionReservarHora() {
+        
     }
 
     /**
