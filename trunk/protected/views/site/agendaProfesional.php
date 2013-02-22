@@ -8,19 +8,21 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
+        $('#s-sucursal-id').on('change', function() {
+            $("#sucursales-profesional").val($(this).val());
+            $("#frm-agenda-profesional").submit();
+        });
+    
         $("#calendario").datepicker({
             monthNames: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
             dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
             minDate: new Date(),
             dateFormat: "yy/mm/dd",
-            firstDay: 1,
             defaultDate: <?php echo $intervalo->format('%R%a'); ?>,
             onSelect: function(_fecha, _objDate) {
                 $("#dia-id").val(new Date(_fecha).getDay());
                 $("#fecha-seleccionada").val(_fecha);
-                //alert($("#dia-id").val());
                 $("#frm-agenda-profesional").submit();
-                //alert("ID Sucursal: " + $("#sucursales-profesional").val() + "\n" + "ID Profesional: " + $("#profesional-id").val() + "Día N°: " + new Date(_fecha).getDay());
             }
         });
     });
@@ -30,7 +32,7 @@
 <form id="frm-agenda-profesional" name="" method="post" action="">
     <input type="hidden" id="sucursales-profesional" name="DatosAgenda[sucursal-id]" value="<?php echo $_POST['DatosAgenda']['sucursal-id']; ?>" />
     <input type="hidden" id="profesional-id" name="DatosAgenda[profesional-id]" value="<?php echo $_POST['DatosAgenda']['profesional-id']; ?>" />
-    <input type="hidden" id="dia-id" name="DatosAgenda[dia-id]" />
+    <input type="hidden" id="dia-id" name="DatosAgenda[dia-id]" value="<?php echo isset($_POST['DatosAgenda']['dia-id']) ? $_POST['DatosAgenda']['dia-id'] : date('N'); ?>" />
     <input type="hidden" id="fecha-seleccionada" name="DatosAgenda[fecha-seleccionada]" />
 </form>
 
@@ -48,6 +50,20 @@
                 <tr style="border-bottom: 1px solid #dddddd;">
                     <th>Fecha Seleccionada:</th>
                     <td><?php echo $fecha->format('d/m/Y'); ?></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #dddddd;">
+                    <th>Sucursal:</th>
+                    <td>
+                        <select id="s-sucursal-id" name="DatosAgenda[sucursal-id]">
+                            <?php foreach($sucursalesProfesional as $sucursal): ?>
+                            <?php if($sucursal['sucursal_id'] == $_POST['DatosAgenda']['sucursal-id']): ?>
+                            <option selected="selected" value="<?php echo $sucursal['sucursal_id']; ?>"><?php echo $sucursal['sucursal_nombre']; ?></option>
+                            <?php else: ?>
+                            <option value="<?php echo $sucursal['sucursal_id']; ?>"><?php echo $sucursal['sucursal_nombre']; ?></option>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+                        </select>
+                    </td>
                 </tr>
             </table>
             

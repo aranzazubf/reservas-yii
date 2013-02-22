@@ -67,13 +67,15 @@ class SiteController extends Controller {
         if(isset($_POST['DatosAgenda'])) {
             $this->layout = 'sitio';
             $profesional = Profesional::model()->findByPk($_POST['DatosAgenda']['profesional-id']);
-            
+            $sucursalesProfesional = DiaIntervaloProfesional::getSucursalesProfesionalArray($_POST['DatosAgenda']['profesional-id']);
+            //echo "<pre>"; print_r($sucursalesProfesional); exit();
             $intervalos = DiaIntervaloProfesional::getIntervalosProfesionalSucursalDia(isset($_POST['DatosAgenda']['dia-id']) ? $_POST['DatosAgenda']['dia-id'] : (date('N')), $_POST['DatosAgenda']['profesional-id'], $_POST['DatosAgenda']['sucursal-id']);
-            //echo "<pre>"; print_r($intervalos); exit();
+            
             $this->render('agendaProfesional',
                     array(
                         'profesional' => $profesional,
-                        'intervalos' => $intervalos
+                        'intervalos' => $intervalos,
+                        'sucursalesProfesional' => $sucursalesProfesional
                     ));
         } else {
             throw new CHttpException('no se puede mostrar la página solicitada.');
