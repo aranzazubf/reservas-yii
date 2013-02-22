@@ -74,11 +74,22 @@
                     <th>ESTADO</th>
                 </tr>
                 <?php foreach($intervalos as $intervalo): ?>
-                <?php //echo "<pre>"; print_r($intervalo); echo "</pre>"; ?>
-                <tr>
-                    <td><?php echo $intervalo['intervalo']; ?></td>
-                    <td>Disponible</td>
+                <?php if(in_array($intervalo['dia_intervalo_profesional_id'], $reservas)): ?>
+                <tr style="background-color: #F8C4C4; text-decoration: line-through;">
+                    <td style="color: #D76A6A; font-weight: bold;"><?php echo $intervalo['intervalo']; ?></td>
+                    <td style="color: #D76A6A;">Reservada</td>
                 </tr>
+                <?php else: ?>
+                <form name="form-reservar-hora" method="post" action="<?php CController::createUrl('site/reservarHora'); ?>">
+                    <input type="hidden" value="<?php echo $intervalo['dia_intervalo_profesional_id']; ?>" />
+                <tr>
+                    <th style=""><?php echo $intervalo['intervalo']; ?></th>
+                    <td>
+                        <?php echo CHtml::link('Reservar', 'javascript:;', array('class' => 'btn btn-info')); ?>
+                    </td>
+                </tr>
+                </form>
+                <?php endif; ?>
                 <?php endforeach; ?>
             </table>
         </td>

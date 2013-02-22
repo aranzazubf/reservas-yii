@@ -97,7 +97,7 @@ class DiaIntervaloProfesional extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
-    
+
     public static function getSucursalesProfesionalSelect($idProfesional) {
         $sql = "
         SELECT
@@ -115,20 +115,20 @@ class DiaIntervaloProfesional extends CActiveRecord {
                 dip.profesional_id,
                 dip.sucursal_id,
                 a.sucursal_nombre";
-        
+
         $connection = Yii::app()->db;
         $command = $connection->createCommand($sql);
         $sucursales = $command->queryAll();
-        
+
         $selectSucursales = "<select name='DatosAgenda[sucursal-id]'>";
         foreach ($sucursales as $sucursal) {
             $selectSucursales .= "<option value='" . $sucursal['sucursal_id'] . "'>" . $sucursal['sucursal_nombre'] . "</option>";
         }
         $selectSucursales .= "</select>";
-        
+
         return $selectSucursales;
     }
-    
+
     public static function getSucursalesProfesionalArray($idProfesional) {
         $sql = "
         SELECT
@@ -146,14 +146,14 @@ class DiaIntervaloProfesional extends CActiveRecord {
                 dip.profesional_id,
                 dip.sucursal_id,
                 a.sucursal_nombre";
-        
+
         $connection = Yii::app()->db;
         $command = $connection->createCommand($sql);
         $sucursales = $command->queryAll();
-        
+
         return $sucursales;
     }
-    
+
     public static function getIntervalosProfesionalSucursalDia($diaId, $profesionalId, $sucursalId) {
         $sql = "
             SELECT
@@ -162,7 +162,7 @@ class DiaIntervaloProfesional extends CActiveRecord {
                     dip.dia_id,
                     dip.profesional_id,
                     dip.sucursal_id,
-                    CONCAT(i.intervalo_inicio, ' - ', i.intervalo_termino) AS intervalo
+                    CONCAT(TIME_FORMAT(i.intervalo_inicio, '%H:%i'), ' - ', TIME_FORMAT(i.intervalo_inicio, '%H:%i')) AS intervalo
             FROM
                     dia_intervalo_profesional dip
             INNER JOIN
@@ -172,8 +172,28 @@ class DiaIntervaloProfesional extends CActiveRecord {
                     dip.dia_id = " . $diaId . " AND
                     dip.profesional_id = " . $profesionalId . " AND
                     dip.sucursal_id = " . $sucursalId . " ";
-        
+
         return $intervalos = Yii::app()->db->createCommand($sql)->queryAll();
+    }
+
+    public static function intervaloExiste() {
+        $sql = "
+            SELECT
+                    *
+            FROM
+                    dia_intervalo_profesional
+            WHERE
+                    intervalo_id = " . $_POST['DiaIntervaloProfesional']['intervalo_id'] . "
+                    AND dia_id = " . $_POST['DiaIntervaloProfesional']['dia_id'] . "
+                    AND profesional_id = " . $_POST['DiaIntervaloProfesional']['profesional_id'] . " ";
+
+        $objIntervalo = DiaIntervaloProfesional::model()->findBySql($sql);
+        
+        if(isset($objIntervalo)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

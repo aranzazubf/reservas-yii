@@ -39,7 +39,7 @@
     ?>
 
     <div class="row">
-<?php echo $formEspecialidad->labelEx($buscarProfesionalEspecialidadModel, 'especialidad'); ?>
+        <?php echo $formEspecialidad->labelEx($buscarProfesionalEspecialidadModel, 'especialidad'); ?>
         <?php echo $formEspecialidad->dropDownList($buscarProfesionalEspecialidadModel, 'especialidad', $especialidades, array('empty' => 'SELECCIONE ESPECIALIDAD')); ?>
         <?php echo $formEspecialidad->error($buscarProfesionalEspecialidadModel, 'especialidad'); ?>
     </div>
