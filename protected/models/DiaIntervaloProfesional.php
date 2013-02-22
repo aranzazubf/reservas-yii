@@ -119,14 +119,39 @@ class DiaIntervaloProfesional extends CActiveRecord {
         $connection = Yii::app()->db;
         $command = $connection->createCommand($sql);
         $sucursales = $command->queryAll();
-        //echo "<pre>"; print_r($sucursales); exit();
+        
         $selectSucursales = "<select name='DatosAgenda[sucursal-id]'>";
         foreach ($sucursales as $sucursal) {
             $selectSucursales .= "<option value='" . $sucursal['sucursal_id'] . "'>" . $sucursal['sucursal_nombre'] . "</option>";
         }
         $selectSucursales .= "</select>";
-        //echo $selectSucursales; exit();
+        
         return $selectSucursales;
+    }
+    
+    public static function getSucursalesProfesionalArray($idProfesional) {
+        $sql = "
+        SELECT
+                dip.profesional_id,
+                dip.sucursal_id,
+                a.sucursal_nombre
+        FROM
+                dia_intervalo_profesional dip
+        INNER JOIN
+                sucursal a
+                        ON dip.sucursal_id = a.sucursal_id
+        WHERE
+                dip.profesional_id = " . $idProfesional . " 
+        GROUP BY
+                dip.profesional_id,
+                dip.sucursal_id,
+                a.sucursal_nombre";
+        
+        $connection = Yii::app()->db;
+        $command = $connection->createCommand($sql);
+        $sucursales = $command->queryAll();
+        
+        return $sucursales;
     }
     
     public static function getIntervalosProfesionalSucursalDia($diaId, $profesionalId, $sucursalId) {
