@@ -18,6 +18,7 @@
             dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
             minDate: new Date(),
             dateFormat: "yy/mm/dd",
+            firstDay: 1,
             defaultDate: <?php echo $intervalo->format('%R%a'); ?>,
             onSelect: function(_fecha, _objDate) {
                 $("#dia-id").val(new Date(_fecha).getDay());
@@ -33,7 +34,7 @@
     <input type="hidden" id="sucursales-profesional" name="DatosAgenda[sucursal-id]" value="<?php echo $_POST['DatosAgenda']['sucursal-id']; ?>" />
     <input type="hidden" id="profesional-id" name="DatosAgenda[profesional-id]" value="<?php echo $_POST['DatosAgenda']['profesional-id']; ?>" />
     <input type="hidden" id="dia-id" name="DatosAgenda[dia-id]" value="<?php echo isset($_POST['DatosAgenda']['dia-id']) ? $_POST['DatosAgenda']['dia-id'] : date('N'); ?>" />
-    <input type="hidden" id="fecha-seleccionada" name="DatosAgenda[fecha-seleccionada]" />
+    <input type="hidden" id="fecha-seleccionada" name="DatosAgenda[fecha-seleccionada]" value="<?php echo isset($_POST['DatosAgenda']['fecha-seleccionada']) ? $_POST['DatosAgenda']['fecha-seleccionada'] : date('Y/m/d'); ?>" />
 </form>
 
 <div></div>
